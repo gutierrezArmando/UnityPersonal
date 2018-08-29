@@ -5,7 +5,9 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
 
-	public float deltaRotate = 30;
+	public float deltaRotate = 30f;
+	public float deltaMovement = 10f;
+	
 	// Use this for initialization
 	void Start () {
 		
@@ -15,6 +17,7 @@ public class Move : MonoBehaviour
 	void Update ()
 	{
 		Rotate();
+		Movement();
 	}
 
 	void Rotate()
@@ -31,5 +34,20 @@ public class Move : MonoBehaviour
 			}
 		}
 	}
-	
+
+
+	void Movement()
+	{
+		if (Input.GetKey(KeyCode.UpArrow))
+		{
+			transform.Translate(Vector3.up * deltaMovement * Time.deltaTime);
+		}
+		else
+		{
+			if (Input.GetKey(KeyCode.DownArrow))
+			{
+				transform.Translate(Vector3.down * deltaMovement * Time.deltaTime);
+			}
+		}
+	}
 }
