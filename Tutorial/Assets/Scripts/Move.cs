@@ -5,12 +5,14 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
 
-	public float deltaRotate = 30f;
-	public float deltaMovement = 10f;
+	public float deltaRotate;
+	public float deltaMovement;
 	
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+	{
+		deltaRotate = 30f;
+		deltaMovement = 10f;
 	}
 	
 	// Update is called once per frame
