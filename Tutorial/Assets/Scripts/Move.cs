@@ -7,7 +7,7 @@ public class Move : MonoBehaviour
 
 	public float deltaRotate;
 	public float deltaMovement;
-	public Color color;
+//	public Color color;
 	
 	// Use this for initialization
 	void Start ()
@@ -15,8 +15,8 @@ public class Move : MonoBehaviour
 		deltaRotate = 30f;
 		deltaMovement = 10f;
 		/*Lineas para asignarle color al objeto cubo*/
-		Renderer renderer = GetComponent<Renderer>();
-		renderer.material.color = color;
+//		Renderer renderer = GetComponent<Renderer>();
+//		renderer.material.color = color;
 	}
 	
 	// Update is called once per frame
